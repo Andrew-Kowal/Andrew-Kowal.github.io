@@ -6,6 +6,11 @@ tools: [CAD, 3D printing, Soldering, Betaflight]
 status: complete
 order: 6
 role: Personal project
+gallery:
+  - src: ../../assets/projects/custom-drone/airframe-cad-render.jpg
+    alt: CAD render of the custom 3D-printed quadcopter airframe.
+  - src: ../../assets/projects/custom-drone/assembled-quad.jpg
+    alt: The assembled quadcopter on a desk next to its RadioMaster transmitter, with the flight controller stack and wiring visible.
 ---
 
 ## Overview
@@ -18,7 +23,7 @@ A custom drone with a 3D-printed airframe designed in CAD, with all electronics 
 
 ## What I built
 
-Designed and 3D-printed a custom airframe in CAD, and soldered and assembled all electronics.
+Designed and 3D-printed a custom quadcopter airframe in CAD, and soldered and assembled all electronics, flying it with a RadioMaster transmitter and receiver.
 
 <!-- TODO: add flight controller, motors/ESCs, and frame size -->
 

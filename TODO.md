@@ -24,7 +24,7 @@ Running list of everything marked `TODO:` or left open in `CLAUDE.md`. Check ite
 
 ## Project: Autonomous Rover (ECSE 211)
 - [x] **Hidden again (2026-11-21)** — course isn't actually finished (1 lab left); set back to `draft: true`, `status: in-progress`. Andrew: tell me when both this and Vantage are done and I'll publish them
-- [ ] Code lives in Andrew's "ecse 211 folder" in his school folder — need the exact path if we want to reference/excerpt it
+- [x] Located the code: `Downloads/Organized/School/ECSE 211 - Design Principles/` (labs 1-4 + final project materials). Not reviewed/used yet — deliberately holding off until the project is done
 - [ ] Photos/video of the rover and any lab highlights to feature (none yet)
 
 ## Project: Machine Monitoring System (Flex)
@@ -53,10 +53,10 @@ Running list of everything marked `TODO:` or left open in `CLAUDE.md`. Check ite
 - [ ] Andrew to add what he'd do differently / next steps
 
 ## Project: Custom Drone
+- [x] 2 photos added (CAD airframe render + assembled quad) — both clean, no sanitization needed
 - [ ] Flight controller used
 - [ ] Motors/ESCs
 - [ ] Frame size
-- [ ] Photos
 
 ## Project: Project Vantage (ESP32)
 - [x] Confirmed (2026-11-21): not finished yet, Andrew wants to finish it soon
