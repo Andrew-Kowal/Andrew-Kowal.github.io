@@ -6,46 +6,46 @@
  * trading an occasional fallback-font render for zero layout shift.
  */
 @font-face {
-  font-family: 'Inter';
+  font-family: 'Work Sans';
   font-style: normal;
   font-display: optional;
   font-weight: 400;
   src:
-    url('@fontsource/inter/files/inter-latin-400-normal.woff2') format('woff2'),
-    url('@fontsource/inter/files/inter-latin-400-normal.woff') format('woff');
+    url('@fontsource/work-sans/files/work-sans-latin-400-normal.woff2') format('woff2'),
+    url('@fontsource/work-sans/files/work-sans-latin-400-normal.woff') format('woff');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
     U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
-  font-family: 'Inter';
+  font-family: 'Work Sans';
   font-style: normal;
   font-display: optional;
   font-weight: 500;
   src:
-    url('@fontsource/inter/files/inter-latin-500-normal.woff2') format('woff2'),
-    url('@fontsource/inter/files/inter-latin-500-normal.woff') format('woff');
+    url('@fontsource/work-sans/files/work-sans-latin-500-normal.woff2') format('woff2'),
+    url('@fontsource/work-sans/files/work-sans-latin-500-normal.woff') format('woff');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
     U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
-  font-family: 'Inter';
+  font-family: 'Work Sans';
   font-style: normal;
   font-display: optional;
   font-weight: 600;
   src:
-    url('@fontsource/inter/files/inter-latin-600-normal.woff2') format('woff2'),
-    url('@fontsource/inter/files/inter-latin-600-normal.woff') format('woff');
+    url('@fontsource/work-sans/files/work-sans-latin-600-normal.woff2') format('woff2'),
+    url('@fontsource/work-sans/files/work-sans-latin-600-normal.woff') format('woff');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
     U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
-  font-family: 'Inter';
+  font-family: 'Work Sans';
   font-style: normal;
   font-display: optional;
   font-weight: 700;
   src:
-    url('@fontsource/inter/files/inter-latin-700-normal.woff2') format('woff2'),
-    url('@fontsource/inter/files/inter-latin-700-normal.woff') format('woff');
+    url('@fontsource/work-sans/files/work-sans-latin-700-normal.woff2') format('woff2'),
+    url('@fontsource/work-sans/files/work-sans-latin-700-normal.woff') format('woff');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
     U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
@@ -73,7 +73,7 @@
 }
 
 :root {
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Work Sans', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
 
   --bg: #fafafa;
@@ -82,7 +82,7 @@
   --text-muted: #4b5565;
   --border: rgba(11, 18, 32, 0.12);
   --border-strong: rgba(11, 18, 32, 0.22);
-  --accent: #2563eb;
+  --accent: #253551;
   --accent-contrast: #ffffff;
   --shadow: 0 1px 2px rgba(11, 18, 32, 0.06);
 
@@ -90,6 +90,8 @@
   --radius: 2px;
   --radius-photo: 1.25rem;
   --radius-pill: 999px;
+  --radius-button: 16px 0;
+  --radius-chip: 8px 0;
 
   color-scheme: light dark;
 }
@@ -102,8 +104,8 @@
     --text-muted: #94a3b8;
     --border: rgba(229, 231, 235, 0.14);
     --border-strong: rgba(229, 231, 235, 0.26);
-    --accent: #60a5fa;
-    --accent-contrast: #0a0e14;
+    --accent: #4a6fa5;
+    --accent-contrast: #ffffff;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   }
 }
@@ -227,17 +229,18 @@ button {
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
-  padding: 0.75rem 1.5rem;
+  padding: 0.7rem 1.75rem;
   border: 1px solid var(--border-strong);
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-button);
   background: transparent;
   color: var(--text);
-  transition: border-color 0.15s ease, background-color 0.15s ease, transform 0.15s ease;
+  transition: border-color 0.15s ease, background-color 0.15s ease, transform 0.15s ease,
+    opacity 0.15s ease;
 }
 
 .btn:hover {
@@ -254,7 +257,7 @@ button {
 
 .btn-primary:hover {
   color: var(--accent-contrast);
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
 /* Cards */
@@ -274,7 +277,7 @@ button {
   text-transform: uppercase;
   padding: 0.25rem 0.65rem;
   border: 1px solid var(--border-strong);
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-chip);
   color: var(--text-muted);
 }
 
@@ -285,7 +288,7 @@ button {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   padding: 0.25rem 0.65rem;
-  border-radius: var(--radius-pill);
+  border-radius: var(--radius-chip);
   background: var(--accent);
   color: var(--accent-contrast);
 }

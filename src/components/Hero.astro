@@ -1,8 +1,6 @@
 ---
 import { Image } from 'astro:assets';
 import headshot from '../assets/profile/headshot.png';
-
-const headline = 'Electrical engineering student building embedded hardware, PCBs, and industrial automation systems.';
 ---
 
 <section class="hero dot-grid">
@@ -10,15 +8,25 @@ const headline = 'Electrical engineering student building embedded hardware, PCB
     <Image src={headshot} alt="Andrew H. Kowal" width={480} priority class="hero-photo" />
 
     <div class="hero-content">
-      <p class="mono eyebrow">Andrew H. Kowal</p>
-      <h1 class="headline">{headline}</h1>
+      <h1 class="headline">I&apos;m Andrew Kowal,<br />an Electrical Engineering Student.</h1>
       <p class="meta mono">McGill EE &apos;28 &middot; 3.90 GPA &middot; US &amp; Canadian Citizen</p>
 
+      <p class="intro">
+        I'm currently a junior studying Electrical Engineering at McGill University, working
+        towards a career in aerospace through embedded systems, firmware, and industrial
+        automation.
+      </p>
+      <p class="intro">
+        Scroll below to see the hardware I'm already building &mdash; from industrial monitoring
+        dashboards at Flex to a measure-and-cut system built for a flight-critical Pursuit
+        Aerospace line.
+      </p>
+
       <div class="actions">
-        <a class="btn btn-primary" href="/resume.pdf" download>Resume (PDF)</a>
-        <a class="btn" href="https://linkedin.com/in/andrew-henry-kowal" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a class="btn" href="mailto:andrew.kowal@mail.mcgill.ca">Email</a>
-        <a class="btn" href="https://github.com/Andrew-Kowal" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="btn btn-primary" href="/resume.pdf" download>Resume</a>
+        <a class="btn btn-primary" href="https://linkedin.com/in/andrew-henry-kowal" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="btn btn-primary" href="mailto:andrew.kowal@mail.mcgill.ca">Email</a>
+        <a class="btn btn-primary" href="https://github.com/Andrew-Kowal" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </div>
   </div>
@@ -71,25 +79,28 @@ const headline = 'Electrical engineering student building embedded hardware, PCB
     max-width: 38rem;
   }
 
-  .eyebrow {
-    color: var(--accent);
-    font-size: 0.85rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-  }
-
   .headline {
     font-size: clamp(2rem, 1.3rem + 3vw, 3.25rem);
-    letter-spacing: -0.02em;
+    letter-spacing: 0.01em;
     font-weight: 700;
     line-height: 1.1;
   }
 
   .meta {
-    margin-top: 1.25rem;
+    margin-top: 1rem;
     color: var(--text-muted);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+  }
+
+  .intro {
+    margin-top: 1rem;
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .intro + .intro {
+    margin-top: 0.75rem;
   }
 
   .actions {
