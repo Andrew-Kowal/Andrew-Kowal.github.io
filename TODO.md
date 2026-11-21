@@ -5,7 +5,7 @@ Running list of everything marked `TODO:` or left open in `CLAUDE.md`. Check ite
 ## Setup (Phase 0)
 - [x] GitHub username — `Andrew-Kowal` → site will live at `https://andrew-kowal.github.io/`, repo name `Andrew-Kowal.github.io`
 - [x] Custom domain — later, not now. Site built so one can be added without rework
-- [ ] Install GitHub CLI (`gh`) before Phase 5 — `winget install --id GitHub.cli`
+- [x] GitHub CLI installed and authenticated (incl. `workflow` scope for pushing `.github/workflows/`)
 
 ## Identity / content
 - [ ] `resume.pdf` — Andrew to supply the file for `public/`
@@ -64,3 +64,16 @@ Drop files anywhere and tell Claude — they'll be moved/optimized into the righ
 
 ## Deploy (Phase 5)
 - [x] Live at https://andrew-kowal.github.io/ — deployed via GitHub Actions on push to `main`
+
+## QA (Phase 6)
+- [x] Mobile layout at 375px — no horizontal overflow, home or project pages
+- [x] Lighthouse mobile, live site: Performance 96 · Accessibility 100 · Best Practices 100 · SEO 100
+- [x] Fixed a 0.33 CLS (layout shift) caused by default web-font loading behavior
+- [x] No console errors on home or project pages
+- [x] Keyboard navigation — visible focus outlines confirmed on nav links and skip link
+- [x] No broken links/pages — all 6 live project pages, sitemap, favicons return 200; draft project and missing resume.pdf correctly 404 (expected until supplied)
+- [x] 404 page renders correctly with real 404 status
+- [x] Open Graph / Twitter meta tags present (title, description) — `og:image` still pending a real image, see Media section
+- [x] Alt text — nothing to audit yet; **no photos exist on the site yet**, so this must be re-checked once Phase 4 media is added
+- [x] `README.md` rewritten for handoff — local preview, adding a project, updating photos/resume, publishing, custom domain later
+- [ ] Re-run this whole checklist once real photos + resume PDF are added (media changes performance/CLS/alt-text results)
