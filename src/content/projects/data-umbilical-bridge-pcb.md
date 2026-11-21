@@ -2,7 +2,7 @@
 title: Data Umbilical Bridge PCB
 summary: An STM32-based, PoE-powered Ethernet-to-CAN bridge that turns the launch pad's power umbilical into a wired data and power link to the rocket.
 tags: [PCB, Embedded, Aerospace]
-tools: [Altium, STM32, Ethernet, CAN bus, PoE, SWD]
+tools: [Altium, STM32F407, LAN8742AI Ethernet PHY, CAN bus, PoE, SWD]
 status: in-progress
 order: 1
 role: R&D member, Avionics division, Flight Computer Hardware subteam — McGill Rocket Team
@@ -70,8 +70,9 @@ A bridge board that converts Ethernet traffic from ground support equipment into
 ## Technical details
 
 - Power path: 25.2 V at up to 5 A, with fusing, TVS clamping for transient protection, and overcurrent sensing at 7 A.
-- Ethernet-to-CAN bridging handled by the onboard STM32.
+- Ethernet-to-CAN bridging handled by an STM32F407 core paired with a LAN8742AI Ethernet PHY.
 - Power delivered over the same Ethernet connection via Power over Ethernet (PoE).
+- Captured as a 6-sheet schematic in Altium.
 
 ## Results
 

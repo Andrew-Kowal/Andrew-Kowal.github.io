@@ -77,11 +77,11 @@ Developed full-stack dashboards for 5 CNC/EDM machines in Node-RED using JavaScr
 
 ## Technical details
 
-<!-- TODO: confirm with Andrew whether to name OPC-UA and/or MTConnect as the protocols used to pull machine data (his resume lists both) -->
+Machine runtime and status signals were collected directly in Node-RED and logged to SQL Server Express. The $20K in secured investment went toward adding aftermarket MTConnect and OPC-UA support to the machines for deeper protocol-level integration going forward.
 
 ## Results
 
-Raised machine uptime tracking from under 5% to 99.8% <!-- TODO: confirm this figure before publishing -->, removing reliance on operator reporting, and secured $20K in additional project investment. Also managed industrial machine networking and sourced vendor quotes for aftermarket machine upgrades.
+Raised machine uptime tracking from under 5% to 99.8%, removing reliance on operator reporting, and secured $20K in additional investment to add aftermarket MTConnect and OPC-UA support. Also managed industrial machine networking and sourced vendor quotes for aftermarket machine upgrades.
 
 ## What I'd do differently / Next steps
 

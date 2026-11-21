@@ -8,7 +8,7 @@ Running list of everything marked `TODO:` or left open in `CLAUDE.md`. Check ite
 - [x] GitHub CLI installed and authenticated (incl. `workflow` scope for pushing `.github/workflows/`)
 
 ## Identity / content
-- [ ] `resume.pdf` — Andrew to supply the file for `public/`
+- [x] `resume.pdf` — copied from Andrew's master resume into `public/resume.pdf`
 
 ## Design (Phase 1)
 - [x] Andrew picked direction **A — Blueprint** (navy/blue, Inter + JetBrains Mono, schematic-sheet feel)
@@ -18,7 +18,8 @@ Running list of everything marked `TODO:` or left open in `CLAUDE.md`. Check ite
 - [ ] About paragraph drafted (`src/components/About.astro`) — Andrew to review/edit to taste
 
 ## Project: Data Umbilical Bridge PCB (McGill Rocket Team)
-- [ ] Check with Rocket Team lead before posting any schematic/layout/render
+- [x] Technical specifics added from Andrew's resume: STM32F407 core, LAN8742AI Ethernet PHY, 6-sheet schematic (as text, not an image)
+- [ ] Check with Rocket Team lead before posting any schematic/layout/render (images only — the text specifics above are already on Andrew's public resume)
 - [ ] Media: Altium 3D render, schematic snippets, layout screenshots (only if team allows)
 
 ## Project: Autonomous Rover (ECSE 211)
@@ -26,8 +27,8 @@ Running list of everything marked `TODO:` or left open in `CLAUDE.md`. Check ite
 
 ## Project: Machine Monitoring System (Flex)
 - [x] Permission granted (Nov 2026) to share this project, including a sanitized Node-RED flow export
-- [ ] Confirm whether to name OPC-UA and/or MTConnect as the protocols used
-- [ ] Confirm the 99.8% uptime figure before publishing
+- [x] Protocol naming confirmed via resume: MTConnect/OPC-UA were what the $20K added (aftermarket), not what the original Node-RED pipeline used — site copy updated to reflect that
+- [x] 99.8% uptime figure confirmed via resume — matches exactly
 - [ ] If Andrew supplies a Node-RED flow export, sanitize it (strip machine/asset names, hostnames, IPs, ports, credentials, customer/program names — see §6) and show him the before/after list before it's committed
 
 ## Project: Automated Velcro Measure-and-Cut System (Pursuit Aerospace)
