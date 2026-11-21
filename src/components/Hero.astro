@@ -1,0 +1,60 @@
+---
+const headline = 'Electrical engineering student building embedded hardware, PCBs, and industrial automation systems.';
+---
+
+<section class="hero dot-grid">
+  <div class="container hero-inner">
+    <p class="mono eyebrow">Andrew H. Kowal</p>
+    <h1 class="headline">{headline}</h1>
+    <p class="meta mono">McGill EE &apos;28 &middot; 3.90 GPA &middot; US &amp; Canadian Citizen</p>
+
+    <div class="actions">
+      <a class="btn btn-primary" href="/resume.pdf" download>Resume (PDF)</a>
+      <a class="btn" href="https://linkedin.com/in/andrew-henry-kowal" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a class="btn" href="mailto:andrew.kowal@mail.mcgill.ca">Email</a>
+      <a class="btn" href="https://github.com/Andrew-Kowal" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding: 5rem 0 4rem;
+  }
+
+  @media (min-width: 48rem) {
+    .hero {
+      padding: 7rem 0 5rem;
+    }
+  }
+
+  .hero-inner {
+    max-width: 44rem;
+  }
+
+  .eyebrow {
+    color: var(--accent);
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .headline {
+    font-size: clamp(1.75rem, 1.2rem + 2.5vw, 3rem);
+    letter-spacing: -0.01em;
+  }
+
+  .meta {
+    margin-top: 1.25rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+</style>

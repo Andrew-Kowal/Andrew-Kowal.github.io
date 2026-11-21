@@ -1,0 +1,77 @@
+---
+const groups = [
+  {
+    name: 'Electrical',
+    items: ['Altium PCB design', 'Wire harness assembly', 'Soldering', 'Oscilloscope', 'Function generator', 'Multimeter'],
+  },
+  {
+    name: 'Automation',
+    items: ['Node-RED', 'OPC-UA', 'MTConnect', 'SQL Server Express', 'SQLite', 'Arduino', 'Raspberry Pi'],
+  },
+  {
+    name: 'Manufacturing',
+    items: ['Lean', 'Kaizen', 'Six Sigma', 'CREFORM', 'NX & Fusion 360 CAD', '3D printing', 'MIG welding'],
+  },
+  {
+    name: 'Programming',
+    items: ['Python', 'C++', 'JavaScript', 'SQL', 'VHDL (Quartus, ModelSim)', 'MATLAB'],
+  },
+];
+---
+
+<section id="skills" class="section">
+  <div class="container">
+    <span class="section-label mono">03 &mdash; Skills</span>
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-grid">
+      {
+        groups.map((group) => (
+          <div class="skills-group">
+            <h3 class="mono group-name">{group.name}</h3>
+            <ul class="skills-list">
+              {group.items.map((item) => <li>{item}</li>)}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .skills-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 40rem) {
+    .skills-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .skills-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .group-name {
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .skills-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.92rem;
+    color: var(--text-muted);
+  }
+</style>

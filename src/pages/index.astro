@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Projects from '../components/Projects.astro';
+import Experience from '../components/Experience.astro';
+import Skills from '../components/Skills.astro';
+import About from '../components/About.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Andrew H. Kowal — Electrical Engineering Student"
+  description="Electrical engineering student at McGill University building embedded hardware, PCBs, and industrial automation systems."
+>
+  <Header />
+  <main id="main">
+    <Hero />
+    <Projects />
+    <Experience />
+    <Skills />
+    <About />
+    <Contact />
+  </main>
+  <Footer />
+</BaseLayout>

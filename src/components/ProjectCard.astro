@@ -1,0 +1,89 @@
+---
+interface Props {
+  slug: string;
+  title: string;
+  summary: string;
+  tags: string[];
+  status: 'in-progress' | 'complete';
+}
+
+const { slug, title, summary, tags, status } = Astro.props;
+---
+
+<article class="project-card card" data-tags={tags.join(',')}>
+  <a href={`/projects/${slug}/`} class="card-link">
+    <div class="thumb" aria-hidden="true">
+      <!-- TODO (Phase 4): replace with a real project photo -->
+      <span class="mono thumb-label">Image TODO</span>
+    </div>
+    <div class="card-body">
+      <div class="card-heading">
+        <h3>{title}</h3>
+        {status === 'in-progress' && <span class="badge">In progress</span>}
+      </div>
+      <p class="muted summary">{summary}</p>
+      <ul class="tag-list">
+        {tags.map((tag) => (
+          <li class="tag">{tag}</li>
+        ))}
+      </ul>
+    </div>
+  </a>
+</article>
+
+<style>
+  .project-card {
+    overflow: hidden;
+    transition: border-color 0.15s ease;
+  }
+
+  .project-card:hover {
+    border-color: var(--border-strong);
+  }
+
+  .card-link {
+    display: block;
+  }
+
+  .thumb {
+    aspect-ratio: 16 / 9;
+    background: color-mix(in srgb, var(--border) 60%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .thumb-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+  }
+
+  .card-body {
+    padding: 1.25rem;
+  }
+
+  .card-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-heading h3 {
+    font-size: 1.05rem;
+  }
+
+  .summary {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .tag-list {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+</style>

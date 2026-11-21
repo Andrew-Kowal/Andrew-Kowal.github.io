@@ -1,0 +1,186 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  summary: string;
+  tags: string[];
+  tools: string[];
+  status: 'in-progress' | 'complete';
+  role: string;
+}
+
+const { title, summary, tags, tools, status, role } = Astro.props;
+---
+
+<BaseLayout title={`${title} — Andrew H. Kowal`} description={summary}>
+  <Header />
+  <main id="main">
+    <article class="section project-detail">
+      <div class="container narrow">
+        <a class="mono back-link" href="/#projects">&larr; Back to projects</a>
+
+        <div class="detail-head">
+          <h1>{title}</h1>
+          {status === 'in-progress' && <span class="badge">In progress</span>}
+        </div>
+
+        <dl class="meta-row">
+          <div>
+            <dt class="mono">My role</dt>
+            <dd>{role}</dd>
+          </div>
+          <div>
+            <dt class="mono">Status</dt>
+            <dd>{status === 'in-progress' ? 'In progress' : 'Complete'}</dd>
+          </div>
+        </dl>
+
+        <ul class="tag-list">
+          {tags.map((tag) => <li class="tag">{tag}</li>)}
+        </ul>
+
+        <div class="prose">
+          <slot />
+        </div>
+
+        <section class="tools-section">
+          <h2 class="mono tools-heading">Tools used</h2>
+          <ul class="tag-list">
+            {tools.map((tool) => <li class="tag">{tool}</li>)}
+          </ul>
+        </section>
+
+        <section class="gallery-section">
+          <h2 class="mono tools-heading">Photo gallery</h2>
+          <!-- TODO (Phase 4): replace with real photos of this project -->
+          <div class="gallery-placeholder card">
+            <span class="mono muted">Photo gallery TODO &mdash; add photos in Phase 4</span>
+          </div>
+        </section>
+      </div>
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .narrow {
+    max-width: 44rem;
+  }
+
+  .back-link {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: var(--accent);
+    margin-bottom: 2rem;
+  }
+
+  .back-link:hover {
+    text-decoration: underline;
+  }
+
+  .detail-head {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .detail-head h1 {
+    font-size: clamp(1.5rem, 1.1rem + 1.5vw, 2.25rem);
+  }
+
+  .meta-row {
+    display: flex;
+    gap: 2.5rem;
+    margin: 1.25rem 0;
+  }
+
+  .meta-row dt {
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.25rem;
+  }
+
+  .meta-row dd {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+
+  .tag-list {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-bottom: 2.5rem;
+  }
+
+  .prose {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .prose :global(h2) {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+  }
+
+  .prose :global(p) {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+
+  .prose :global(ul) {
+    list-style: disc;
+    padding-left: 1.25rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .prose :global(.diagram-wrap) {
+    max-width: 320px;
+    margin: 0.5rem auto 1.5rem;
+  }
+
+  .prose :global(.block-diagram) {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .prose :global(.diagram-caption) {
+    text-align: center;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+  }
+
+  .tools-section,
+  .gallery-section {
+    margin-top: 2.5rem;
+  }
+
+  .tools-heading {
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .gallery-placeholder {
+    padding: 2.5rem;
+    text-align: center;
+  }
+</style>
