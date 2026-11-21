@@ -33,12 +33,19 @@ Running list of everything marked `TODO:` or left open in `CLAUDE.md`. Check ite
 
 ## Project: Automated Velcro Measure-and-Cut System (Pursuit Aerospace)
 - [x] Permission granted (Nov 2026) to share this project, including code and photos (after sanitizing)
-- [ ] Confirm the microcontroller used (likely Arduino)
-- [ ] Sanitize any supplied code/photos per §6 and show Andrew the changes before committing
+- [x] Microcontroller confirmed from photo: Arduino (Elegoo Uno R3)
+- [x] 6 photos reviewed, sanitized where needed, and added to the gallery:
+  - Cropped out a wall sign reading "INSPECTION DEPARTMENT" from one photo
+  - Redacted a legible lot/part-number label on the Velcro roll packaging in another
+  - Skipped 3 photos entirely (identifiable coworkers in the background, phone-UI chrome) — originals untouched, nothing published
+- [ ] Andrew to add what he'd do differently / next steps
+- [ ] `Measure_and_Cut_Demo.mov` exists but hasn't been reviewed/used — ask if he wants it embedded (would need the same sanitization pass)
 
 ## Project: Shopping-Cart Go-Kart
-- [ ] Drivetrain / power source details
-- [ ] Build photos
+- [x] Drivetrain/steering/brake details added from photos: gas engine, chain-and-sprocket rear drive, steering column to front axle, cable-actuated hand brake
+- [x] Built as a high school physics class project (poster covering velocity/acceleration, forces, friction, torque, impact, custom speedometer) — added to Overview/Results
+- [x] 3 photos added to the gallery (1 cropped to remove a friend's face — kept the mechanical detail only)
+- [ ] Andrew to add what he'd do differently / next steps
 
 ## Project: Custom Drone
 - [ ] Flight controller used
@@ -47,8 +54,15 @@ Running list of everything marked `TODO:` or left open in `CLAUDE.md`. Check ite
 - [ ] Photos
 
 ## Project: Project Vantage (ESP32)
-- [ ] What it does, hardware, firmware details (once finished)
-- [ ] Keep `draft: true` until Andrew says it's ready, then flip to `draft: false`
+- [ ] Found Andrew's full Project-Vantage repo/folder (firmware, MATLAB model, wiring diagram, roadmap doc) — content is ready to write up, but the roadmap doc is dated Aug 1 2026 with a 4-week sprint plan; need a current status check from Andrew before writing the page
+- [ ] Keep `draft: true` until Andrew confirms it's ready, then flip to `draft: false`
+
+## Needs Andrew's input (raised 2026-11-21)
+- [ ] **Flex folder**: found real Node-RED flow JSON exports (filenames include actual machine brands — MAKINO, ROEDERS) and dashboard screenshots in `Downloads/Organized/Professional/projects/Flex Intern Project/`. Not touched/copied — needs an explicit decision on which screenshots (if any) to sanitize and use, and the raw JSON should probably never go on the site even sanitized, given how easy it is to miss an embedded credential or hostname in flow JSON
+- [ ] **Headshot** — still needed
+- [ ] **Custom Drone real photos** — only CAD files (.stl/.f3d/.obj) found so far, no photos of the physical build
+- [ ] **Autonomous Rover (ECSE 211) photos** — none found yet in the folders shared so far
+- [ ] Noticed an SSH private key and a shell config backup sitting in `Downloads/Organized/Personal/Misc/` — unrelated to this site, but flagged as a security loose end worth moving somewhere less exposed
 
 ## Media (Phase 4)
 Drop files anywhere and tell Claude — they'll be moved/optimized into the right spot. Target locations below.

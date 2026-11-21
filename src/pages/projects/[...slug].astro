@@ -12,9 +12,17 @@ export async function getStaticPaths() {
 
 const { project } = Astro.props;
 const { Content } = await render(project);
-const { title, summary, tags, tools, status, role } = project.data;
+const { title, summary, tags, tools, status, role, gallery } = project.data;
 ---
 
-<ProjectLayout title={title} summary={summary} tags={tags} tools={tools} status={status} role={role}>
+<ProjectLayout
+  title={title}
+  summary={summary}
+  tags={tags}
+  tools={tools}
+  status={status}
+  role={role}
+  gallery={gallery}
+>
   <Content />
 </ProjectLayout>
