@@ -80,4 +80,5 @@ Design work is underway in fall 2026. Fabrication, hand-soldering, and board bri
 ## What I'd do differently / Next steps
 
 - Complete board bring-up in Jan–Feb 2027: verify power rails, flash firmware over SWD, and debug CAN/Ethernet communication.
-- <!-- TODO: revisit this section with real bring-up learnings once complete -->
+
+<!-- TODO: revisit this section with real bring-up learnings once complete -->
