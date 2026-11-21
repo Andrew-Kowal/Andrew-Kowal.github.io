@@ -18,14 +18,17 @@ Running list of everything marked `TODO:` or left open in `CLAUDE.md`. Check ite
 - [ ] About paragraph drafted (`src/components/About.astro`) — Andrew to review/edit to taste
 
 ## Project: Data Umbilical Bridge PCB (McGill Rocket Team)
-- [x] Technical specifics added from Andrew's resume: STM32F407 core, LAN8742AI Ethernet PHY, 6-sheet schematic (as text, not an image)
-- [ ] Check with Rocket Team lead before posting any schematic/layout/render (images only — the text specifics above are already on Andrew's public resume)
-- [ ] Media: Altium 3D render, schematic snippets, layout screenshots (only if team allows)
+- [x] **Hidden (2026-11-21)** — set `draft: true`; Andrew wants it off the site entirely until the board is completely finished
+- [x] Technical specifics already written from Andrew's resume: STM32F407 core, LAN8742AI Ethernet PHY, 6-sheet schematic (as text, not an image) — stays in the file, just not live
+- [ ] When finished: Andrew will send code, schematics, and photos; still check with Rocket Team lead before posting any schematic/layout/render image
 
 ## Project: Autonomous Rover (ECSE 211)
-- [x] **Hidden again (2026-11-21)** — course isn't actually finished (1 lab left); set back to `draft: true`, `status: in-progress`. Andrew: tell me when both this and Vantage are done and I'll publish them
+- [x] **Hidden (2026-11-21)** — course isn't actually finished (1 lab left); `draft: true`, `status: in-progress`
 - [x] Located the code: `Downloads/Organized/School/ECSE 211 - Design Principles/` (labs 1-4 + final project materials). Not reviewed/used yet — deliberately holding off until the project is done
-- [ ] Photos/video of the rover and any lab highlights to feature (none yet)
+- [ ] When finished: Andrew will send code, pictures, etc.
+
+## Publishing the 3 in-progress projects together
+Andrew's plan: finish the PCB, the ECSE 211 rover, and Project Vantage (expects a few weeks), then send code/schematics/pictures for all three at once and publish together. All three stay `draft: true` until then — don't start drafting their pages early.
 
 ## Project: Machine Monitoring System (Flex)
 - [x] Flex gave explicit permission (2026-11-21) to publish the actual code; company logo/branding is fine
@@ -58,12 +61,10 @@ Running list of everything marked `TODO:` or left open in `CLAUDE.md`. Check ite
 - [ ] Andrew to add the problem/motivation and what he'd do differently
 
 ## Project: Project Vantage (ESP32)
-- [x] Confirmed (2026-11-21): not finished yet, Andrew wants to finish it soon
-- [ ] Keep `draft: true` until Andrew confirms it's completely done (same as Autonomous Rover) — then write up the page and publish both together
+- [x] Confirmed (2026-11-21): not finished yet — expected done in the next few weeks, alongside the PCB and the rover
+- [ ] When finished: Andrew will send code, schematics, pictures, etc.
 
 ## Needs Andrew's input
-- [ ] **Custom Drone real photos** — only CAD files (.stl/.f3d/.obj) found in his folders; Andrew says a real photo is on his LinkedIn — need him to send/download it directly (not something to scrape from LinkedIn)
-- [ ] **Autonomous Rover (ECSE 211) photos** — Andrew doesn't have one right now
 - [ ] Noticed an SSH private key and a shell config backup sitting in `Downloads/Organized/Personal/Misc/` — unrelated to this site, but flagged as a security loose end worth moving somewhere less exposed
 
 ## Media (Phase 4)
@@ -73,9 +74,8 @@ Drop files anywhere and tell Claude — they'll be moved/optimized into the righ
 - [x] Go-kart build photos → `src/assets/projects/shopping-cart-go-kart/`
 - [x] Velcro cutter photos → `src/assets/projects/velcro-measure-and-cut-system/`
 - [x] Flex flow/dashboard screenshots, sanitized → `src/assets/projects/machine-monitoring-system/`
-- [ ] PCB render / schematic / layout screenshots (if Rocket Team lead allows) → `src/assets/projects/data-umbilical-bridge-pcb/`
-- [ ] Drone photo (on Andrew's LinkedIn — he needs to send it directly)
-- [ ] Rover photo — none available right now
+- [x] Drone photos (CAD render + assembled quad) → `src/assets/projects/custom-drone/`
+- [ ] PCB / rover / Vantage media — coming together in a few weeks, see "Publishing the 3 in-progress projects together" above
 - [ ] OG/social preview image (1200×630) → `public/og-image.png` — can reuse the headshot or a project photo once chosen
 - [ ] Custom favicon (currently the Astro scaffold default) — optional, can stay default
 

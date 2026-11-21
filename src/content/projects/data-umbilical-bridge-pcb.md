@@ -5,6 +5,7 @@ tags: [PCB, Embedded, Aerospace]
 tools: [Altium, STM32F407, LAN8742AI Ethernet PHY, CAN bus, PoE, SWD]
 status: in-progress
 order: 1
+draft: true
 role: R&D member, Avionics division, Flight Computer Hardware subteam — McGill Rocket Team
 ---
 
