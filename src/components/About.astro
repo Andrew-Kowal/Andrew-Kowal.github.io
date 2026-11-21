@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import headshot from '../assets/profile/headshot.png';
 // Draft paragraph (Phase 3) — edit freely, built only from facts in CLAUDE.md §5.
 ---
 
@@ -6,23 +8,49 @@
   <div class="container about-inner">
     <span class="section-label mono">04 &mdash; About</span>
     <h2 class="section-title">About</h2>
-    <p class="about-text">
-      I grew up in Simsbury, Connecticut, and a senior-year tour of Pratt &amp; Whitney's East
-      Hartford campus &mdash; standing next to jet engines &mdash; is what pushed me toward
-      engineering. I'm now studying electrical engineering at McGill, where I also play flanker
-      for the varsity rugby team. I'm an Eagle Scout (Troop 175, Simsbury; my Eagle Project was a
-      nature-center exhibit), and in high school I ran a lawn care business and captained the
-      rugby team. On campus, I volunteer on the grill at the Engineering Undergraduate Society bar
-      on Fridays and was a captain for ECSE Week. I'm aiming for aerospace, with a particular pull
-      toward embedded systems, firmware, and industrial automation &mdash; and outside of
-      engineering, you'll find me hiking, skiing, or at a chessboard.
-    </p>
+    <div class="about-layout">
+      <Image src={headshot} alt="Andrew H. Kowal" width={320} class="headshot" />
+      <p class="about-text">
+        I grew up in Simsbury, Connecticut, and a senior-year tour of Pratt &amp; Whitney's East
+        Hartford campus &mdash; standing next to jet engines &mdash; is what pushed me toward
+        engineering. I'm now studying electrical engineering at McGill, where I also play flanker
+        for the varsity rugby team. I'm an Eagle Scout (Troop 175, Simsbury; my Eagle Project was a
+        nature-center exhibit), and in high school I ran a lawn care business and captained the
+        rugby team. On campus, I volunteer on the grill at the Engineering Undergraduate Society bar
+        on Fridays and was a captain for ECSE Week. I'm aiming for aerospace, with a particular pull
+        toward embedded systems, firmware, and industrial automation &mdash; and outside of
+        engineering, you'll find me hiking, skiing, or at a chessboard.
+      </p>
+    </div>
   </div>
 </section>
 
 <style>
   .about-inner {
     max-width: 44rem;
+  }
+
+  .about-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 40rem) {
+    .about-layout {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+  }
+
+  .headshot {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    flex-shrink: 0;
   }
 
   .about-text {

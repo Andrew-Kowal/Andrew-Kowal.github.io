@@ -156,6 +156,30 @@ const { title, summary, tags, tools, status, role, gallery } = Astro.props;
     gap: 0.4rem;
   }
 
+  .prose :global(pre) {
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem;
+    overflow-x: auto;
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+
+  .prose :global(pre code) {
+    font-family: var(--font-mono);
+    color: var(--text);
+  }
+
+  .prose :global(:not(pre) > code) {
+    font-family: var(--font-mono);
+    font-size: 0.88em;
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.1em 0.35em;
+  }
+
   .prose :global(.diagram-wrap) {
     max-width: 320px;
     margin: 0.5rem auto 1.5rem;

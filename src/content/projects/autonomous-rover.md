@@ -3,8 +3,9 @@ title: Autonomous Rover
 summary: A sensor-driven rover built for McGill's ECSE 211 design project, programmed in Python on a Raspberry Pi.
 tags: [Robotics, Embedded]
 tools: [Python, Raspberry Pi, Ultrasonic sensors, Light sensors, Wheel encoders]
-status: complete
+status: in-progress
 order: 2
+draft: true
 role: Team lead, team of 6 — ECSE 211 Design Project
 ---
 

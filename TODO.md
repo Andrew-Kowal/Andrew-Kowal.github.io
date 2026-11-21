@@ -23,13 +23,18 @@ Running list of everything marked `TODO:` or left open in `CLAUDE.md`. Check ite
 - [ ] Media: Altium 3D render, schematic snippets, layout screenshots (only if team allows)
 
 ## Project: Autonomous Rover (ECSE 211)
-- [ ] Photos/video of the rover and any lab highlights to feature
+- [x] **Hidden again (2026-11-21)** — course isn't actually finished (1 lab left); set back to `draft: true`, `status: in-progress`. Andrew: tell me when both this and Vantage are done and I'll publish them
+- [ ] Code lives in Andrew's "ecse 211 folder" in his school folder — need the exact path if we want to reference/excerpt it
+- [ ] Photos/video of the rover and any lab highlights to feature (none yet)
 
 ## Project: Machine Monitoring System (Flex)
-- [x] Permission granted (Nov 2026) to share this project, including a sanitized Node-RED flow export
-- [x] Protocol naming confirmed via resume: MTConnect/OPC-UA were what the $20K added (aftermarket), not what the original Node-RED pipeline used — site copy updated to reflect that
-- [x] 99.8% uptime figure confirmed via resume — matches exactly
-- [ ] If Andrew supplies a Node-RED flow export, sanitize it (strip machine/asset names, hostnames, IPs, ports, credentials, customer/program names — see §6) and show him the before/after list before it's committed
+- [x] Flex gave explicit permission (2026-11-21) to publish the actual code; company logo/branding is fine
+- [x] Found `Andrew_Kowal_Flex_Machine_Monitoring_Portfolio.docx` — a one-pager Andrew already wrote for this exact purpose; used it as the primary source for the rewritten project page (left out the supervisor's name/personal email — fine in a doc sent directly to an application, not for a public indexed site)
+- [x] Pulled 2 real Node-RED function-node code snippets (job-name regex parser, runtime accumulator) from `Final Node-Red Program.json` — both were already clean (no credentials/IPs/hostnames)
+- [x] Added 2 real screenshots to the gallery: the backend flow logic, and the Tooling Analytics dashboard (redacted one visible job/part number — `P15955010_D200_` — before using it)
+- [x] Protocol naming resolved precisely: MTConnect + OPC UA were the core acquisition protocols from the start; the $20K (on top of an initial $5K) funded custom adapters/expansion to legacy machines without native protocol support
+- [x] Uptime figure refined: ~75% (manual logging) → ~99.8% (automated, 1s polling) — kept the resume's "<5%" framing on the home page Experience bullet for consistency with the resume download, used the more precise figure on the project detail page
+- [ ] Raw Node-RED JSON files and remaining screenshots (Dashboard_TV.jpeg, FlexDashboard.jpeg, Status Dashboard.jpg, etc.) not reviewed/used — only pulled 2 code snippets + 2 screenshots so far; say the word if you want more in the gallery
 
 ## Project: Automated Velcro Measure-and-Cut System (Pursuit Aerospace)
 - [x] Permission granted (Nov 2026) to share this project, including code and photos (after sanitizing)
@@ -54,26 +59,24 @@ Running list of everything marked `TODO:` or left open in `CLAUDE.md`. Check ite
 - [ ] Photos
 
 ## Project: Project Vantage (ESP32)
-- [ ] Found Andrew's full Project-Vantage repo/folder (firmware, MATLAB model, wiring diagram, roadmap doc) — content is ready to write up, but the roadmap doc is dated Aug 1 2026 with a 4-week sprint plan; need a current status check from Andrew before writing the page
-- [ ] Keep `draft: true` until Andrew confirms it's ready, then flip to `draft: false`
+- [x] Confirmed (2026-11-21): not finished yet, Andrew wants to finish it soon
+- [ ] Keep `draft: true` until Andrew confirms it's completely done (same as Autonomous Rover) — then write up the page and publish both together
 
-## Needs Andrew's input (raised 2026-11-21)
-- [ ] **Flex folder**: found real Node-RED flow JSON exports (filenames include actual machine brands — MAKINO, ROEDERS) and dashboard screenshots in `Downloads/Organized/Professional/projects/Flex Intern Project/`. Not touched/copied — needs an explicit decision on which screenshots (if any) to sanitize and use, and the raw JSON should probably never go on the site even sanitized, given how easy it is to miss an embedded credential or hostname in flow JSON
-- [ ] **Headshot** — still needed
-- [ ] **Custom Drone real photos** — only CAD files (.stl/.f3d/.obj) found so far, no photos of the physical build
-- [ ] **Autonomous Rover (ECSE 211) photos** — none found yet in the folders shared so far
+## Needs Andrew's input
+- [ ] **Custom Drone real photos** — only CAD files (.stl/.f3d/.obj) found in his folders; Andrew says a real photo is on his LinkedIn — need him to send/download it directly (not something to scrape from LinkedIn)
+- [ ] **Autonomous Rover (ECSE 211) photos** — Andrew doesn't have one right now
 - [ ] Noticed an SSH private key and a shell config backup sitting in `Downloads/Organized/Personal/Misc/` — unrelated to this site, but flagged as a security loose end worth moving somewhere less exposed
 
 ## Media (Phase 4)
-Drop files anywhere and tell Claude — they'll be moved/optimized into the right spot. Target locations below.
-- [ ] Headshot → `src/assets/profile/headshot.jpg`
-- [ ] `resume.pdf` → `public/resume.pdf`
+Drop files anywhere and tell Claude — they'll be moved/optimized into the right spot.
+- [x] Headshot → `src/assets/profile/headshot.png`, in the About section
+- [x] `resume.pdf` → `public/resume.pdf`
+- [x] Go-kart build photos → `src/assets/projects/shopping-cart-go-kart/`
+- [x] Velcro cutter photos → `src/assets/projects/velcro-measure-and-cut-system/`
+- [x] Flex flow/dashboard screenshots, sanitized → `src/assets/projects/machine-monitoring-system/`
 - [ ] PCB render / schematic / layout screenshots (if Rocket Team lead allows) → `src/assets/projects/data-umbilical-bridge-pcb/`
-- [ ] ECSE 211 rover photos/video → `src/assets/projects/autonomous-rover/`
-- [ ] Go-kart build photos → `src/assets/projects/shopping-cart-go-kart/`
-- [ ] Drone photos → `src/assets/projects/custom-drone/`
-- [ ] Velcro cutter photo, sanitized per §6 → `src/assets/projects/velcro-measure-and-cut-system/`
-- [ ] Flex dashboard screenshots, sanitized per §6 → `src/assets/projects/machine-monitoring-system/`
+- [ ] Drone photo (on Andrew's LinkedIn — he needs to send it directly)
+- [ ] Rover photo — none available right now
 - [ ] OG/social preview image (1200×630) → `public/og-image.png` — can reuse the headshot or a project photo once chosen
 - [ ] Custom favicon (currently the Astro scaffold default) — optional, can stay default
 
