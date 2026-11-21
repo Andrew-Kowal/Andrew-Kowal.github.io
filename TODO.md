@@ -54,9 +54,8 @@ Running list of everything marked `TODO:` or left open in `CLAUDE.md`. Check ite
 
 ## Project: Custom Drone
 - [x] 2 photos added (CAD airframe render + assembled quad) — both clean, no sanitization needed
-- [ ] Flight controller used
-- [ ] Motors/ESCs
-- [ ] Frame size
+- [x] Full build confirmed: DolphinRC F405 FC + 60A ESC, MEPS Neon 2207 2050KV motors, MK5X 5" frame, HQProp E-thix S5 props, DJI O3, SoloGood ELRS receiver + RadioMaster TX, Ovonic 6S 1300mAh
+- [ ] Andrew to add the problem/motivation and what he'd do differently
 
 ## Project: Project Vantage (ESP32)
 - [x] Confirmed (2026-11-21): not finished yet, Andrew wants to finish it soon
