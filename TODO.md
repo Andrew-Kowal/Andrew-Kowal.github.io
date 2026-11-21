@@ -63,4 +63,4 @@ Drop files anywhere and tell Claude — they'll be moved/optimized into the righ
 - [ ] Custom favicon (currently the Astro scaffold default) — optional, can stay default
 
 ## Deploy (Phase 5)
-- [ ] Confirm live URL loads after first deploy
+- [x] Live at https://andrew-kowal.github.io/ — deployed via GitHub Actions on push to `main`
