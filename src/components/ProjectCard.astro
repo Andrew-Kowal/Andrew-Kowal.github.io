@@ -1,20 +1,31 @@
 ---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
 interface Props {
   slug: string;
   title: string;
   summary: string;
   tags: string[];
   status: 'in-progress' | 'complete';
+  thumbnail?: { src: ImageMetadata; alt: string };
 }
 
-const { slug, title, summary, tags, status } = Astro.props;
+const { slug, title, summary, tags, status, thumbnail } = Astro.props;
 ---
 
 <article class="project-card card" data-tags={tags.join(',')}>
   <a href={`/projects/${slug}/`} class="card-link">
-    <div class="thumb" aria-hidden="true">
-      <!-- TODO (Phase 4): replace with a real project photo -->
-      <span class="mono thumb-label">Image TODO</span>
+    <div class="thumb">
+      {
+        thumbnail ? (
+          <Image src={thumbnail.src} alt={thumbnail.alt} width={480} />
+        ) : (
+          <span class="mono thumb-label" aria-hidden="true">
+            Image TODO
+          </span>
+        )
+      }
     </div>
     <div class="card-body">
       <div class="card-heading">
@@ -27,6 +38,7 @@ const { slug, title, summary, tags, status } = Astro.props;
           <li class="tag">{tag}</li>
         ))}
       </ul>
+      <span class="btn card-cta">View project &rarr;</span>
     </div>
   </a>
 </article>
@@ -34,11 +46,12 @@ const { slug, title, summary, tags, status } = Astro.props;
 <style>
   .project-card {
     overflow: hidden;
-    transition: border-color 0.15s ease;
+    transition: border-color 0.15s ease, transform 0.15s ease;
   }
 
   .project-card:hover {
     border-color: var(--border-strong);
+    transform: translateY(-2px);
   }
 
   .card-link {
@@ -52,6 +65,13 @@ const { slug, title, summary, tags, status } = Astro.props;
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid var(--border);
+    overflow: hidden;
+  }
+
+  .thumb :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .thumb-label {
@@ -60,7 +80,7 @@ const { slug, title, summary, tags, status } = Astro.props;
   }
 
   .card-body {
-    padding: 1.25rem;
+    padding: 1.5rem;
   }
 
   .card-heading {
@@ -72,7 +92,8 @@ const { slug, title, summary, tags, status } = Astro.props;
   }
 
   .card-heading h3 {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
+    font-weight: 700;
   }
 
   .summary {
@@ -85,5 +106,10 @@ const { slug, title, summary, tags, status } = Astro.props;
     gap: 0.4rem;
     flex-wrap: wrap;
     list-style: none;
+    margin-bottom: 1.25rem;
+  }
+
+  .card-cta {
+    width: 100%;
   }
 </style>

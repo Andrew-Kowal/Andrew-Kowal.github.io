@@ -35,6 +35,7 @@ const usedTags = tagOrder.filter((tag) => allProjects.some((p) => p.data.tags.in
             summary={project.data.summary}
             tags={project.data.tags}
             status={project.data.status}
+            thumbnail={project.data.gallery?.[0]}
           />
         ))
       }
@@ -55,9 +56,9 @@ const usedTags = tagOrder.filter((tag) => allProjects.some((p) => p.data.tags.in
     font-size: 0.75rem;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    padding: 0.4rem 0.75rem;
+    padding: 0.4rem 0.9rem;
     border: 1px solid var(--border-strong);
-    border-radius: var(--radius);
+    border-radius: var(--radius-pill);
     background: transparent;
     color: var(--text-muted);
     cursor: pointer;

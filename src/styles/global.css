@@ -88,6 +88,8 @@
 
   --max-width: 72rem;
   --radius: 2px;
+  --radius-photo: 1.25rem;
+  --radius-pill: 999px;
 
   color-scheme: light dark;
 }
@@ -223,20 +225,25 @@ button {
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.4rem;
   font-family: var(--font-mono);
-  font-size: 0.875rem;
-  padding: 0.65rem 1.1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
   border: 1px solid var(--border-strong);
-  border-radius: var(--radius);
+  border-radius: var(--radius-pill);
   background: transparent;
   color: var(--text);
-  transition: border-color 0.15s ease, background-color 0.15s ease;
+  transition: border-color 0.15s ease, background-color 0.15s ease, transform 0.15s ease;
 }
 
 .btn:hover {
   border-color: var(--accent);
   color: var(--accent);
+  transform: translateY(-1px);
 }
 
 .btn-primary {
@@ -265,9 +272,9 @@ button {
   font-size: 0.7rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  padding: 0.2rem 0.5rem;
+  padding: 0.25rem 0.65rem;
   border: 1px solid var(--border-strong);
-  border-radius: var(--radius);
+  border-radius: var(--radius-pill);
   color: var(--text-muted);
 }
 
@@ -277,8 +284,8 @@ button {
   font-size: 0.7rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  padding: 0.2rem 0.5rem;
-  border-radius: var(--radius);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-pill);
   background: var(--accent);
   color: var(--accent-contrast);
 }

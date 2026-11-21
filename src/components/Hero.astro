@@ -1,35 +1,74 @@
 ---
+import { Image } from 'astro:assets';
+import headshot from '../assets/profile/headshot.png';
+
 const headline = 'Electrical engineering student building embedded hardware, PCBs, and industrial automation systems.';
 ---
 
 <section class="hero dot-grid">
   <div class="container hero-inner">
-    <p class="mono eyebrow">Andrew H. Kowal</p>
-    <h1 class="headline">{headline}</h1>
-    <p class="meta mono">McGill EE &apos;28 &middot; 3.90 GPA &middot; US &amp; Canadian Citizen</p>
+    <Image src={headshot} alt="Andrew H. Kowal" width={480} priority class="hero-photo" />
 
-    <div class="actions">
-      <a class="btn btn-primary" href="/resume.pdf" download>Resume (PDF)</a>
-      <a class="btn" href="https://linkedin.com/in/andrew-henry-kowal" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a class="btn" href="mailto:andrew.kowal@mail.mcgill.ca">Email</a>
-      <a class="btn" href="https://github.com/Andrew-Kowal" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <div class="hero-content">
+      <p class="mono eyebrow">Andrew H. Kowal</p>
+      <h1 class="headline">{headline}</h1>
+      <p class="meta mono">McGill EE &apos;28 &middot; 3.90 GPA &middot; US &amp; Canadian Citizen</p>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="/resume.pdf" download>Resume (PDF)</a>
+        <a class="btn" href="https://linkedin.com/in/andrew-henry-kowal" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="btn" href="mailto:andrew.kowal@mail.mcgill.ca">Email</a>
+        <a class="btn" href="https://github.com/Andrew-Kowal" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
     </div>
   </div>
 </section>
 
 <style>
   .hero {
-    padding: 5rem 0 4rem;
+    padding: 3rem 0 4rem;
   }
 
   @media (min-width: 48rem) {
     .hero {
-      padding: 7rem 0 5rem;
+      padding: 5rem 0 5rem;
     }
   }
 
   .hero-inner {
-    max-width: 44rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 56rem;
+  }
+
+  @media (min-width: 48rem) {
+    .hero-inner {
+      flex-direction: row;
+      align-items: center;
+      gap: 3rem;
+    }
+  }
+
+  .hero-photo {
+    width: 11rem;
+    height: 11rem;
+    object-fit: cover;
+    border-radius: var(--radius-photo);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    flex-shrink: 0;
+  }
+
+  @media (min-width: 48rem) {
+    .hero-photo {
+      width: 15rem;
+      height: 15rem;
+    }
+  }
+
+  .hero-content {
+    max-width: 38rem;
   }
 
   .eyebrow {
@@ -41,8 +80,10 @@ const headline = 'Electrical engineering student building embedded hardware, PCB
   }
 
   .headline {
-    font-size: clamp(1.75rem, 1.2rem + 2.5vw, 3rem);
-    letter-spacing: -0.01em;
+    font-size: clamp(2rem, 1.3rem + 3vw, 3.25rem);
+    letter-spacing: -0.02em;
+    font-weight: 700;
+    line-height: 1.1;
   }
 
   .meta {
@@ -53,8 +94,13 @@ const headline = 'Electrical engineering student building embedded hardware, PCB
 
   .actions {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 0.75rem;
     margin-top: 2rem;
+    max-width: 16rem;
+  }
+
+  .actions .btn {
+    width: 100%;
   }
 </style>
