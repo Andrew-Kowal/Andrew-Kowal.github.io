@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# local redesign planning doc, not for the public repo
+REDESIGN.md

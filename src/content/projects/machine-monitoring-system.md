@@ -9,6 +9,8 @@ role: Operations Engineering Intern — Flex
 gallery:
   - src: ../../assets/projects/machine-monitoring-system/node-red-flow-logic.png
     alt: Node-RED flow showing the backend logic for one machine — parsing the program name, calculating job runtime, and formatting weekly/monthly charts.
+  - src: ../../assets/projects/machine-monitoring-system/opcua-mtconnect-flow.png
+    alt: Node-RED flow showing OPC UA polling for program name and spindle status, and an HTTP/XML MTConnect flow for burn and job data.
   - src: ../../assets/projects/machine-monitoring-system/tooling-analytics-dashboard.png
     alt: Live Tooling Analytics dashboard showing spindle/burn status, current job, and weekly/monthly hours for all 5 machines, with one job identifier redacted.
 ---
@@ -157,6 +159,7 @@ Storage migrated from a SQLite prototype to SQL Server Express, using 4 tables w
 
 ## Results
 
+- Delivered a live tooling-analytics dashboard — real-time status, active job, and weekly/monthly utilization for all 5 machines — displayed on a TV on the plant floor.
 - Replaced manual logs that captured roughly 75% of real activity with automated, 1-second polling reaching about 99.8% coverage, removing reliance on operator reporting.
 - Grew the rollout from a 2-machine pilot to all 5 machines, ahead of the original schedule.
 - Helped secure $20K in additional funding on top of an initial $5K, for custom adapters and expansion.

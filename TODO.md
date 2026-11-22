@@ -37,7 +37,9 @@ Andrew's plan: finish the PCB, the ECSE 211 rover, and Project Vantage (expects 
 - [x] Added 2 real screenshots to the gallery: the backend flow logic, and the Tooling Analytics dashboard (redacted one visible job/part number — `P15955010_D200_` — before using it)
 - [x] Protocol naming resolved precisely: MTConnect + OPC UA were the core acquisition protocols from the start; the $20K (on top of an initial $5K) funded custom adapters/expansion to legacy machines without native protocol support
 - [x] Uptime figure refined: ~75% (manual logging) → ~99.8% (automated, 1s polling) — kept the resume's "<5%" framing on the home page Experience bullet for consistency with the resume download, used the more precise figure on the project detail page
-- [ ] Raw Node-RED JSON files and remaining screenshots (Dashboard_TV.jpeg, FlexDashboard.jpeg, Status Dashboard.jpg, etc.) not reviewed/used — only pulled 2 code snippets + 2 screenshots so far; say the word if you want more in the gallery
+- [x] Found Andrew's old portfolio PDF (`Andrew_Kowal_Portfolio.pdf`) with a matching one-pager for this project — pulled a second flow-diagram image from it (OPC UA + MTConnect acquisition flow, clean) and a "displayed on a TV on the plant floor" detail for Results
+- [ ] **`NodeRedProgram.json` (top-level, 309 nodes) — reviewed, not published.** It contains a real internal IP address (`10.121.98.76`, an OPC UA endpoint) and a real internal server hostname (`MCTNT039`, database `P_MCTREPORTS`) in its config nodes — this goes beyond "no passwords" and falls under what §6 says never to publish. Need Andrew's call: (a) stick with the 2 clean curated code snippets already on the site, (b) pull a couple more individually-reviewed snippets, or (c) if he wants the whole flow published, that needs a full line-by-line redaction pass first (all 80 function nodes, templates, etc.) — a much bigger job I haven't started
+- [ ] **Found a different dashboard screenshot** in the old portfolio PDF showing a full company name/logo — "ADVANCE MOLD & MANUFACTURING, INC." — above the machine rows, plus two visible job identifiers (`XXX_P9995010_D200_H`, `XXX_testAlignment8`). This is a more specific disclosure than the "Flex logo is fine" permission covered, so I held off on using it. Needs explicit confirmation before it goes up, redacted or not
 
 ## Project: Automated Velcro Measure-and-Cut System (Pursuit Aerospace)
 - [x] Permission granted (Nov 2026) to share this project, including code and photos (after sanitizing)
@@ -46,19 +48,22 @@ Andrew's plan: finish the PCB, the ECSE 211 rover, and Project Vantage (expects 
   - Cropped out a wall sign reading "INSPECTION DEPARTMENT" from one photo
   - Redacted a legible lot/part-number label on the Velcro roll packaging in another
   - Skipped 3 photos entirely (identifiable coworkers in the background, phone-UI chrome) — originals untouched, nothing published
+- [x] Old portfolio PDF filled in the full story: repurposed Ryobi cordless pruning-shears head (own battery + BLDC motor) for the actual cutting, servo-driven concept tried and rejected first, guarding added around the blade — all now in Technical details/What I built
 - [ ] Andrew to add what he'd do differently / next steps
 - [ ] `Measure_and_Cut_Demo.mov` exists but hasn't been reviewed/used — ask if he wants it embedded (would need the same sanitization pass)
 
 ## Project: Shopping-Cart Go-Kart
-- [x] Drivetrain/steering/brake details added from photos: gas engine, chain-and-sprocket rear drive, steering column to front axle, cable-actuated hand brake
-- [x] Built as a high school physics class project (poster covering velocity/acceleration, forces, friction, torque, impact, custom speedometer) — added to Overview/Results
 - [x] 3 photos added to the gallery (1 cropped to remove a friend's face — kept the mechanical detail only)
+- [x] Built as a high school physics class project (poster covering velocity/acceleration, forces, friction, torque, impact, custom speedometer) — added to Overview/Results
+- [x] Old portfolio PDF corrected/filled in the real build: **Predator 212 6.5 HP engine**, centrifugal clutch + chain drive, a fully scratch-built **Ackermann steering** linkage (not just "a steering column" as originally guessed), and a real **hydraulic brake** (not the cable-actuated caliper I'd guessed from photos) — rewrote Technical details/What I built accordingly
+- [x] 2 more photos added from the old portfolio PDF (pre-engine chassis shot, full steering+engine shot) — both clean
 - [ ] Andrew to add what he'd do differently / next steps
 
 ## Project: Custom Drone
-- [x] 2 photos added (CAD airframe render + assembled quad) — both clean, no sanitization needed
 - [x] Full build confirmed: DolphinRC F405 FC + 60A ESC, MEPS Neon 2207 2050KV motors, MK5X 5" frame, HQProp E-thix S5 props, DJI O3, SoloGood ELRS receiver + RadioMaster TX, Ovonic 6S 1300mAh
-- [ ] Andrew to add the problem/motivation and what he'd do differently
+- [x] Problem/motivation resolved from the old portfolio PDF: wanted to design a quad from scratch rather than assemble a kit
+- [x] 2 more photos added from the old portfolio PDF (second CAD angle, flight-stack wiring close-up) — both clean, alongside the 2 already up
+- [ ] Andrew to add what he'd do differently / next steps
 
 ## Project: Project Vantage (ESP32)
 - [x] Confirmed (2026-11-21): not finished yet — expected done in the next few weeks, alongside the PCB and the rover

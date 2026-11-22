@@ -27,22 +27,24 @@ An automated measure-and-cut system for Velcro, built to replace a manual step i
 
 ## The problem
 
-Measuring and cutting Velcro by hand was slow and inconsistent within a one-piece flow manufacturing line.
+Velcro used in the Kaizen department at Pursuit Aerospace was measured and cut by hand, a repetitive task that slowed down the workshop and made it hard to see exactly how much material had been pulled. The goal was a dispenser that measured the pulled length automatically, displayed it clearly, and let an operator cut it at the press of a button.
 
 ## What I built
 
-Programmed a C++ automated measure-and-cut system on an Arduino, and soldered its BLDC motor, rotary encoder, and LCD. The frame is CREFORM with CAD-designed, 3D-printed parts.
+Programmed a C++ Arduino Uno that reads rotary encoder pulses, converts rotation into a measured length, updates the LCD readout in real time, and reads a dedicated button press to trigger the cut. Wired the full circuit — potentiometer, LCD, BLDC motor, resistors, rotary encoder, and the reset and cut buttons — onto a perfboard, soldering each connection directly for a permanent, durable build. Designed the feed and cutting components in Fusion 360 and 3D-printed them to fit the frame, motor mount, rotary encoder, and cutting hardware, then built the main structure from CREFORM tubing and connectors.
+
+Tried a few different cutting approaches, including a servo-driven concept, before landing on a repurposed Ryobi cordless pruning-shears head — powered by its original Ryobi battery and driven by its own BLDC motor — for the torque and blade geometry needed to cut through Velcro cleanly. Added guarding around the cutting area and blade to keep the operator's hands clear during a cut.
 
 ## Technical details
 
-- Arduino-based control, with the measured length read out live on an LCD panel.
-- A rotary encoder tracks Velcro feed length to trigger the cut at the right point; a BLDC motor drives the feed.
-- A reset button and brightness dial on the control panel let an operator clear a reading and adjust the LCD for shop-floor lighting.
-- Mechanical structure built from CREFORM extrusion with 3D-printed, CAD-designed mounting brackets for the cutting head and roll dispensers.
+- Arduino Uno control, with the measured length read out live on an LCD panel.
+- A rotary encoder tracks Velcro feed length to trigger the cut at the right point; a repurposed Ryobi pruning-shears head (its own BLDC motor and battery) does the cutting.
+- A reset button and brightness potentiometer on the control panel let an operator clear a reading and adjust the LCD for shop-floor lighting.
+- Mechanical structure built from CREFORM extrusion with 3D-printed, CAD-designed mounting brackets for the cutting head and roll dispensers, plus guarding around the blade.
 
 ## Results
 
-Contributed to a 50%+ improvement in one-piece flow line efficiency across the broader continuous-improvement effort, alongside Kaizen events and Lean/Six Sigma initiatives.
+Delivered a functional shop-floor prototype that measures Velcro length and cuts it at the press of a button, giving operators a clear visual reference — the measured length in inches — instead of relying on manual measuring alone. Contributed to a 50%+ improvement in one-piece flow line efficiency across the broader continuous-improvement effort, alongside Kaizen events and Lean/Six Sigma initiatives.
 
 ## What I'd do differently / Next steps
 
